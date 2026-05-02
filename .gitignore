@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build files
+frontend/dist/
+frontend/dist-ssr/
+*.local
+
+# Environment variables
+backend/.env
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Python files (excluded as requested)
+frontend_py/
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Editor/OS files
+.DS_Store
+.vscode/
+*.swp

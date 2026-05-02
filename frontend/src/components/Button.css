@@ -1,0 +1,92 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: var(--radius-xl);
+  border: none;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    filter var(--transition-fast),
+    opacity var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.01em;
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Sizes ── */
+.btn--sm { padding: var(--space-2) var(--space-4); font-size: var(--text-label-md); }
+.btn--md { padding: var(--space-3) var(--space-6); font-size: var(--text-body-md); }
+.btn--lg { padding: var(--space-4) var(--space-8); font-size: var(--text-body-lg); }
+.btn--full { width: 100%; }
+
+/* ── Primary — gradient ── */
+.btn--primary {
+  background: var(--gradient-primary);
+  color: var(--color-on-primary);
+  box-shadow: 0 4px 16px rgba(0, 49, 120, 0.30);
+}
+
+.btn--primary:hover:not(:disabled) {
+  filter: brightness(1.08);
+  box-shadow: 0 6px 24px rgba(0, 49, 120, 0.40);
+}
+
+/* ── Secondary — glass ── */
+.btn--secondary {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  color: var(--color-primary);
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background: var(--color-surface-container-low);
+}
+
+/* ── Tertiary — text only ── */
+.btn--tertiary {
+  background: transparent;
+  color: var(--color-on-primary-fixed-variant);
+  padding-inline: var(--space-2);
+}
+
+.btn--tertiary:hover:not(:disabled) {
+  background: var(--color-surface-container);
+}
+
+/* ── Ghost ── */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-on-surface-variant);
+  border: 1px solid rgba(195, 198, 212, 0.4);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: var(--color-surface-container-low);
+}
+
+/* ── Spinner ── */
+.btn__spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}

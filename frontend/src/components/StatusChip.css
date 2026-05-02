@@ -1,0 +1,31 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-label);
+  font-size: var(--text-label-md);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.chip--complete {
+  background: var(--color-secondary-fixed);
+  color: var(--color-on-secondary-container);
+}
+
+.chip--inprogress {
+  background: var(--color-primary-fixed);
+  color: var(--color-on-primary-fixed);
+}
+
+.chip--pending {
+  background: var(--color-surface-container);
+  color: var(--color-on-surface-variant);
+}
+
+.chip--score {
+  background: var(--gradient-primary);
+  color: var(--color-on-primary);
+  font-weight: 700;
+}

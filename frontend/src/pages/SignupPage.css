@@ -1,0 +1,204 @@
+.signup {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5) var(--space-6) var(--space-8);
+  background: var(--color-background);
+  position: relative;
+  overflow: hidden;
+}
+
+.signup__blob {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: rgba(0, 49, 120, 0.08);
+  border-radius: 50%;
+  filter: blur(60px);
+  top: -60px;
+  right: -60px;
+  pointer-events: none;
+}
+
+.signup__header {
+  position: absolute;
+  top: var(--space-6);
+  left: var(--space-6);
+  z-index: 10;
+}
+
+.signup__back {
+  background: var(--color-surface-container-lowest);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--color-on-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+  transition: background var(--transition-fast);
+}
+
+.signup__back:hover {
+  background: var(--color-surface-container);
+}
+
+.signup__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.signup__title-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.signup__title {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-lg);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.signup__subtitle {
+  color: var(--color-on-surface-variant);
+  font-size: var(--text-body-md);
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.signup__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.signup__label {
+  font-size: var(--text-label-md);
+  font-weight: 600;
+  color: var(--color-on-surface-variant);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.signup__input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.signup__input-icon {
+  position: absolute;
+  left: var(--space-4);
+  color: var(--color-on-surface-variant);
+  pointer-events: none;
+}
+
+.signup__input {
+  width: 100%;
+  padding: var(--space-4) var(--space-4) var(--space-4) calc(var(--space-4) + 28px);
+  background: var(--color-surface-container-low);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-body-md);
+  color: var(--color-on-surface);
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.signup__input:focus {
+  background: var(--color-surface-container-highest);
+  box-shadow: 0 0 0 2px rgba(0, 49, 120, 0.2);
+}
+
+.signup__input::placeholder {
+  color: var(--color-on-surface-variant);
+  opacity: 0.6;
+}
+
+.signup__toggle {
+  position: absolute;
+  right: var(--space-4);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-on-surface-variant);
+  display: flex;
+  align-items: center;
+}
+
+.signup__error {
+  font-size: var(--text-label-sm);
+  color: var(--color-error);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-error-container);
+  border-radius: var(--radius-md);
+}
+
+.signup__divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  color: var(--color-on-surface-variant);
+  font-size: var(--text-label-sm);
+}
+
+.signup__divider::before,
+.signup__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-surface-container-highest);
+}
+
+.signup__google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4);
+  background: var(--color-surface-container-lowest);
+  border: var(--glass-border);
+  border-radius: var(--radius-xl);
+  font-size: var(--text-body-md);
+  font-weight: 600;
+  color: var(--color-on-surface);
+  cursor: pointer;
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: var(--shadow-card);
+}
+
+.signup__google:hover {
+  background: var(--color-surface-container-low);
+  box-shadow: var(--shadow-floating);
+}
+
+.signup__login {
+  text-align: center;
+  font-size: var(--text-body-sm);
+  color: var(--color-on-surface-variant);
+}
+
+.signup__login-link {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: inherit;
+}

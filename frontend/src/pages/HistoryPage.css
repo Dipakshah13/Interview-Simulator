@@ -1,0 +1,121 @@
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-8) var(--space-5) var(--space-5);
+}
+
+.history__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.history__title {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-sm);
+  font-weight: 800;
+}
+
+.history__count {
+  font-size: var(--text-label-md);
+  color: var(--color-on-surface-variant);
+  background: var(--color-surface-container);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+/* Summary */
+.history__summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.history__summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: var(--color-surface-container-lowest);
+  padding: var(--space-4) var(--space-2);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.history__summary-value {
+  font-family: var(--font-headline);
+  font-size: var(--text-title-lg);
+  font-weight: 800;
+  color: var(--color-on-surface);
+  letter-spacing: -0.02em;
+}
+
+.history__summary-label {
+  font-size: var(--text-label-sm);
+  color: var(--color-on-surface-variant);
+  font-weight: 500;
+}
+
+/* List */
+.history__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.history__item {
+  background: var(--color-surface-container-lowest);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-4);
+}
+
+.history__item-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.history__item-info { flex: 1; }
+
+.history__item-role {
+  font-size: var(--text-title-sm);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin-bottom: 3px;
+}
+
+.history__item-meta {
+  font-size: var(--text-label-sm);
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-2);
+}
+
+.history__item-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.history__item-topic {
+  font-size: var(--text-label-sm);
+  background: var(--color-surface-container-low);
+  color: var(--color-on-surface-variant);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}
+
+.history__item-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.history__item-arrow {
+  color: var(--color-on-surface-variant);
+}
