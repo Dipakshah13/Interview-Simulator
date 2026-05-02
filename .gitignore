@@ -18,6 +18,9 @@ frontend/.env.production.local
 
 # Python files (excluded as requested)
 frontend_py/
+backend_py/
+python_run.py
+output.txt
 __pycache__/
 *.pyc
 venv/
